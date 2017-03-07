@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var angular = require("angular");
+var appModule_1 = require("./appModule");
+require("./app/components/browser.component");
+require("./app/components/content.component");
+require("./app/components/contextmenu.component");
+require("./app/components/treeView.component");
+require("./app/services/fs.service");
+angular.bootstrap(document, [appModule_1.appModule.name]);

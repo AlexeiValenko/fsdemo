@@ -1,0 +1,8 @@
+<div ng-if="$ctrl.fsService.showMenu" class="contextMenu" ng-click="$ctrl.hideMe($event)"
+     ng-style="{'top': $ctrl.fsService.positionY + 'px','left':$ctrl.fsService.positionX + 'px'}">
+    <ul class="contextMenu">
+        <li ng-if="$ctrl.fsService.contextType=='folder'" class="menuitem" ng-click="$ctrl.onNewFolder()">New Folder</li>
+        <li ng-if="$ctrl.fsService.contextType=='folder'" class="menuitem" ng-click="$ctrl.onNewFile()">New File</li>
+        <li ng-if="$ctrl.fsService.contextType=='file'" class="menuitem" ng-click="$ctrl.onRenameFile()">Rename File</li>
+    </ul>
+</div>

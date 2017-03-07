@@ -1,0 +1,11 @@
+<ul ng-mousedown="$ctrl.showContextMenu($event)">
+    <li ng-repeat="item in $ctrl.group" ng-mousedown="$ctrl.showContextMenu($event,item)" ng-click="$ctrl.select(item, $event)"  ng-if="!!item.children">
+        <div>
+            <button ng-if="!item.expanded" ng-click="$ctrl.expand(item, $event)" class="expand">+</button>
+            <button ng-if="item.expanded" ng-click="$ctrl.expand(item, $event)" class="expand">-</button>
+            <a class="folder"><span >{{item.name}}</span></a>
+        </div>
+        <tree-view group="item.children" ng-if="item.expanded"></tree-view>
+    </li>
+</ul>
+

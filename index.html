@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>File System</title>
+    <link rel="stylesheet" href="styles.css">
+
+
+</head>
+<body>
+<fs-browser class="layout" oncontextmenu="return false;"></fs-browser>
+
+<script src="node_modules/systemjs/dist/system.js"></script>
+<script src="system.config.js"></script>
+<script>
+    SystemJS.config(systemJsConfig);
+    SystemJS.import('main.js');
+</script>
+
+
+</body>
+</html>

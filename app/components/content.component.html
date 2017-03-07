@@ -1,0 +1,11 @@
+<div class="content" ng-if="$ctrl.type=='file'">
+    <textarea class="content" ng-model="$ctrl.newContent">{{$ctrl.current.content}}</textarea>
+    <button class="content" ng-click="$ctrl.save()">Save</button>
+    <button class="content" ng-click="$ctrl.cancel()">Cancel</button>
+</div>
+
+<div class="content" ng-if="$ctrl.type=='folder'" ng-mousedown="$ctrl.showContextMenu($event)">
+    <li ng-repeat="item in $ctrl.current.children" ng-mousedown="$ctrl.showContextMenu($event,item)"
+        ng-click="$ctrl.select(item, $event)" class="{{$ctrl.typeOf(item)}}"><span title="{{item.name}}" class="list">{{item.name}}</span>
+    </li>
+</div>
